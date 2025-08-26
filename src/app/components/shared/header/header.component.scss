@@ -8,7 +8,9 @@ header {
     border: 1px solid green;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 
     &-items {
       display: flex;
