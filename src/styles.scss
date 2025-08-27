@@ -1,3 +1,5 @@
+@use "./_variables.scss";
+
 /* normal font */
 @font-face {
   font-family: "Roboto";
@@ -26,4 +28,10 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  color: variables.$black;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$black;
 }

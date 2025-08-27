@@ -1,9 +1,11 @@
+@use "../../../../_variables.scss";
+
 .new-configuration-button {
   text-decoration: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: red;
+  background-color: variables.$primary;
   color: white;
   border: none;
   border-radius: 50%;

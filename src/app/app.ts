@@ -13,7 +13,7 @@ export class App {
   constructor(private router: Router) {}
 
   get showNewConfigurationButton(): boolean {
-    const hiddenRoutes = ['/login', '/laboratories/new-configuration']; // Aggiungi qui le rotte dove NON vuoi il bottone
+    const hiddenRoutes = ['/login', '/laboratories/new-configuration'];
     return !hiddenRoutes.includes(this.router.url);
   }
 }

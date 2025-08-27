@@ -1,11 +1,16 @@
+@use "../../../../_variables.scss";
+
 header {
-  border: 1px solid red;
+  background-color: variables.$primary-light;
+  color: variables.$white;
+  padding: 0 1rem;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   .menu {
-    border: 1px solid green;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,6 +20,11 @@ header {
     &-items {
       display: flex;
       gap: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: variables.$white;
     }
   }
 }
