@@ -1,8 +1,8 @@
 <section>
   <p>Laboratories</p>
   @for (laboratory of laboratories().children; track laboratory.id) {
-  <a [routerLink]="['/laboratories', laboratory.id]"
-    ><p>{{laboratory.name}}</p></a
+  <a style="margin-bottom: 2rem" [routerLink]="['/laboratories', laboratory.id]"
+    ><p style="margin-bottom: 2rem">{{laboratory.name}}</p></a
   >
   }
 </section>
