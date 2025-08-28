@@ -1,0 +1,39 @@
+<div class="sidebar">
+  <h3>Laboratories</h3>
+
+  @for (lab of tree.children || []; track lab.id) {
+  <a [routerLink]="['/laboratories', lab.id]">{{ lab.name }}</a>
+
+  @if (lab.id === currentLabId) {
+  <ul>
+    @for (layout of lab.children; track layout.id) {
+    <li>
+      <a [routerLink]="['/laboratories', lab.id, 'layout', layout.id]">
+        └ {{ layout.name }}
+      </a>
+
+      @if (layout.id === currentLayoutId) {
+      <ul>
+        @for (scenario of layout.children; track scenario.id) {
+        <li>
+          <a
+            [routerLink]="[
+              '/laboratories',
+              lab.id,
+              'layout',
+              layout.id,
+              'scenario',
+              scenario.id
+            ]"
+          >
+            &nbsp;&nbsp;&nbsp;↳ {{ scenario.name }}
+          </a>
+        </li>
+        }
+      </ul>
+      }
+    </li>
+    }
+  </ul>
+  } }
+</div>

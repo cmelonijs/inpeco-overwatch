@@ -21,4 +21,16 @@ export class Layout {
     this.laboratoryId,
     this.layoutId
   );
+
+  ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe((params) => {
+      this.layoutId = params.get('layoutId') || '';
+      // Qui puoi ricaricare i dati del nuovo layout
+      this.loadLayoutData(this.layoutId);
+    });
+  }
+
+  loadLayoutData(id: string | null) {
+    // Logica per caricare i dati del nuovo layout
+  }
 }

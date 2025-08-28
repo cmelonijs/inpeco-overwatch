@@ -11,4 +11,16 @@ export class Scenario {
   private activatedRoute = inject(ActivatedRoute);
 
   scenarioId = this.activatedRoute.snapshot.paramMap.get('scenarioId')!;
+
+  ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe((params) => {
+      this.scenarioId = params.get('scenarioId') || '';
+      // Qui puoi ricaricare i dati del nuovo scenario
+      this.loadScenario(this.scenarioId);
+    });
+  }
+
+  loadScenario(id: string | null) {
+    // Logica per caricare i dati del nuovo scenario
+  }
 }
