@@ -1,11 +1,8 @@
 <section>
   <p>Laboratories</p>
-  <a routerLink="/laboratories/123"><p>Laboratory 1</p></a>
-  <a routerLink="/laboratories/456"><p>Laboratory 2</p></a>
-  <a routerLink="/laboratories/789"><p>Laboratory 3</p></a>
-
-  <!-- IN THE FUTURE THE LINK SHOULD BE LIKE THIS -->
-  <!-- <a [routerLink]="['/laboratories', laboratory().id]" routerLinkActive="selected"> -->
-
-  <router-outlet />
+  @for (laboratory of laboratories().children; track laboratory.id) {
+  <a [routerLink]="['/laboratories', laboratory.id]"
+    ><p>{{laboratory.name}}</p></a
+  >
+  }
 </section>

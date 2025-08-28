@@ -1,9 +1,10 @@
 <section>
-  <p>Layout 2</p>
-  <a routerLink="/laboratories/123/layout/321/scenario/1"><p>Scenario 1</p></a>
-  <a routerLink="/laboratories/456/layout/654/scenario/2"><p>Scenario 2</p></a>
-  <a routerLink="/laboratories/789/layout/987/scenario/3"><p>Scenario 3</p></a>
-
-  <!-- IN THE FUTURE THE LINK SHOULD BE LIKE THIS -->
-  <!-- <a [routerLink]="['/laboratories', laboratory().id, '/layout', layout.id]" routerLinkActive="selected"><p>Layout 1</p></a> -->
+  <p>{{laboratoryId}}</p>
+  @for(scenario of scenarios; track scenario.id) {
+  <a
+    [routerLink]="['/laboratories', laboratoryId, 'layout', layoutId, 'scenario', scenario.id]"
+    routerLinkActive="selected"
+    ><p>{{scenario.name}}</p></a
+  >
+  }
 </section>
