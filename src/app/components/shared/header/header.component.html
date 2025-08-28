@@ -3,12 +3,20 @@
     <a routerLink="/laboratories">
       <h1>INPECO</h1>
     </a>
-    <h1>Overwatch</h1>
+    <h2>Overwatch</h2>
     <div class="menu-items">
-      <a routerLink="/laboratories/">
+      <a
+        routerLink="/laboratories"
+        routerLinkActive="selected"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
         <p>WorkSpace</p>
       </a>
-      <a routerLink="/monitor/">
+      <a
+        routerLink="/monitor"
+        routerLinkActive="selected"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
         <p>Monitor</p>
       </a>
     </div>
